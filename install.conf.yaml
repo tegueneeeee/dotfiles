@@ -1,0 +1,42 @@
+- shell:
+    - [./os-check.sh, Checking OS requirement]
+
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.config
+    - ~/.zshconfig
+
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.zshrc:
+      path: zshrc
+      force: true
+    ~/.config/bat:
+      path: bat
+      force: true
+    ~/.tmux.conf:
+      path: tmux.conf
+      force: true
+    ~/.config/starship.toml:
+      path: starship.toml
+      force: true
+    ~/.zshconfig/plugins:
+      glob: true
+      create: true
+      force: true
+      path: zshplugins/*
+
+
+- shell:
+    - command: 'git submodule update --init --recursive'
+      description: Installing submodules
+      stdout: true
+    - command: '[ ! -e ~/.zshconfig/antigen ] && git clone https://github.com/zsh-users/antigen.git ~/.zshconfig/antigen || true'
+      description: Installing antigen
+      stdout: true

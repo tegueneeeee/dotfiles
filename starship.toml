@@ -1,0 +1,19 @@
+add_newline = true
+
+[java]
+symbol = " "
+style = "red"
+
+[ruby]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[gcloud]
+disabled = true
+symbol = " "
+style = "bold blue"
+
+[kotlin]
+disabled = true
