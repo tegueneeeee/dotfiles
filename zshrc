@@ -1,5 +1,6 @@
 # Unalias ls in case if we already alias ls to exa
 unalias ls > /dev/null 2>&1
+unalias cat > /dev/null 2>&1
 
 #  Brew auto completion.
 #  Need to call before oh-my-zsh.
@@ -63,7 +64,6 @@ fi
 # Path
 export PATH="$PATH:$HOME/.zshconfig/plugins/bin"
 
-export PATH="$PATH:$HOME/Development/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
 # startship
@@ -85,3 +85,4 @@ alias copypath='pwd | pbcopy' # copy current path to clipboard
 alias o='open .'
 alias c='clear'
 alias ls='exa'
+alias cat='bat'
