@@ -10,16 +10,18 @@
 - create:
     - ~/.config
     - ~/.zshconfig
-
+    - ~/.n
 
 - link:
-    ~/.vimrc: vimrc
     ~/.zshrc:
       path: zshrc
       force: true
     ~/.config/bat:
       path: bat
       force: true
+    ~/.config/nvim:
+      glob: true
+      path: nvim
     ~/.tmux.conf:
       path: tmux.conf
       force: true
@@ -39,4 +41,10 @@
       stdout: true
     - command: '[ ! -e ~/.zshconfig/antigen ] && git clone https://github.com/zsh-users/antigen.git ~/.zshconfig/antigen || true'
       description: Installing antigen
+      stdout: true
+    - command: 'rustup-init -y'
+      description: Init rustup
+      stdout: true
+    - command: 'n lts'
+      description: Installing node lts
       stdout: true

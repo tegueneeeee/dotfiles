@@ -1,6 +1,5 @@
 # Unalias ls in case if we already alias ls to exa
 unalias ls > /dev/null 2>&1
-unalias cat > /dev/null 2>&1
 
 #  Brew auto completion.
 #  Need to call before oh-my-zsh.
@@ -16,15 +15,15 @@ source "$HOME/.zshconfig/antigen/antigen.zsh"
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
+# Bundles from the default repo ('s oh-my-zsh).
 antigen bundle git
-antigen bundle autojump
 antigen bundle adb
 antigen bundle ripgrep
 antigen bundle gitignore
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle asdf
+antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -32,9 +31,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 # Local plugins.
 antigen bundle "$HOME/.zshconfig/plugins"
-
-# Load the theme.
-# antigen theme robbyrussell
 
 # Antigen check files
 export ANTIGEN_AUTO_CONFIG=false
@@ -63,8 +59,9 @@ fi
 
 # Path
 export PATH="$PATH:$HOME/.zshconfig/plugins/bin"
-
 export PATH="$PATH:$HOME/.pub-cache/bin"
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
 
 # startship
 eval "$(starship init zsh)"
