@@ -62,6 +62,11 @@ export PATH="$PATH:$HOME/.zshconfig/plugins/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export N_PREFIX=$HOME/.n
 export PATH=$N_PREFIX/bin:$PATH
+export PATH="$PATH:$HOME/.yvm/yvm.sh"
+export PATH="$PATH:/opt/homebrew/opt/mysql-client@5.7/bin"
+export YVM_DIR=/Users/kimtaekwon/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
 
 # startship
 eval "$(starship init zsh)"
