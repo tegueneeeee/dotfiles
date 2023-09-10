@@ -1,5 +1,17 @@
 - shell:
     - [./os-check.sh, Checking OS requirement]
+    - command: 'brew bundle'
+      description: Homebrew bundle
+      stdout: true
+    - command: 'zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1'
+      description: Installing zap
+      stdout: true
+    - command: 'dart pub global activate fvm'
+      description: Installing fvm
+      stdout: true
+    - command: 'yes | fvm global stable'
+      description: Install flutter stable
+      stdout: true
 
 - defaults:
     link:
@@ -16,8 +28,11 @@
     ~/.zshrc:
       path: zshrc
       force: true
-    ~/.config/bat:
-      path: bat
+    ~/.config/zsh:
+      path: zsh
+      force: true
+    ~/.p10k.zsh:
+      path: p10k.zsh
       force: true
     ~/.config/nvim:
       glob: true
@@ -30,7 +45,4 @@
 - shell:
     - command: 'git submodule update --init --recursive'
       description: Installing submodules
-      stdout: true
-    - command: '[ ! -e ~/.zshconfig/antigen ] && git clone https://github.com/zsh-users/antigen.git ~/.zshconfig/antigen || true'
-      description: Installing antigen
       stdout: true

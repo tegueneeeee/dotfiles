@@ -5,7 +5,6 @@ mac_requirement() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   else
     echo brew already installed
-    brew bundle
   fi
 }
 
