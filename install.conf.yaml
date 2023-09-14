@@ -12,6 +12,9 @@
     - command: 'yes | fvm global stable'
       description: Install flutter stable
       stdout: true
+    - command: 'dart pub global activate flutter_gen'
+      description: Installing flutter_gen
+      stdout: true
 
 - defaults:
     link:

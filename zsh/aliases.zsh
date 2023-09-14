@@ -22,8 +22,3 @@ alias c='clear'
 alias cat='bat'
 
 alias flutter='fvm flutter'
-
-if command -v bat &> /dev/null; then
-  alias cat="bat -pp --theme \"Visual Studio Dark+\" --style="numbers,changes,header"" 
-  alias catt="bat --theme \"Visual Studio Dark+\"" 
-fi
