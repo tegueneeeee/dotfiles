@@ -2,8 +2,6 @@
 alias j='z'
 alias f='zi'
 alias g='lazygit'
-alias nvimrc='nvim ~/.config/nvim/'
-alias lvim="env TERM=wezterm lvim"
 
 # confirm before overwriting something
 alias cp="cp -i"
