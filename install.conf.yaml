@@ -1,3 +1,5 @@
+---
+
 - shell:
     - [./os-check.sh, Checking OS requirement]
     - command: 'brew bundle'

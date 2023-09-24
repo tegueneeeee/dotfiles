@@ -13,7 +13,7 @@ else
     export EDITOR='nvim'
 fi
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH="$PATH":"$HOME/fvm/default/bin"
+#export PATH="$PATH":"$HOME/fvm/default/bin"
 export PATH="$PATH":"$HOME/.local/bin"
 
 eval "$(zoxide init zsh)"
