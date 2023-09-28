@@ -1,4 +1,4 @@
-#!/bin/sh
+#/bin/sh
 # HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -13,7 +13,7 @@ else
     export EDITOR='nvim'
 fi
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-#export PATH="$PATH":"$HOME/fvm/default/bin"
+export PATH="$PATH":"$HOME/fvm/default/bin"
 export PATH="$PATH":"$HOME/.local/bin"
 
 eval "$(zoxide init zsh)"
