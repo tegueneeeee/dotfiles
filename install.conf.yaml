@@ -1,21 +1,14 @@
 ---
 
 - shell:
-    - [./os-check.sh, Checking OS requirement]
     - command: 'brew bundle'
       description: Homebrew bundle
       stdout: true
     - command: 'zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1'
       description: Installing zap
       stdout: true
-    - command: 'dart pub global activate fvm'
-      description: Installing fvm
-      stdout: true
-    - command: 'yes | fvm global stable'
-      description: Install flutter stable
-      stdout: true
-    - command: 'dart pub global activate flutter_gen'
-      description: Installing flutter_gen
+    - command: "LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh"
+      description: Install LunarVim
       stdout: true
 
 - defaults:
@@ -39,18 +32,9 @@
     ~/.p10k.zsh:
       path: p10k.zsh
       force: true
-    ~/.config/nvim:
-      glob: true
-      path: nvim
-    ~/.tmux.conf:
-      path: tmux.conf
-      force: true
 
 
 - shell:
     - command: 'git submodule update --init --recursive'
       description: Installing submodules
-      stdout: true
-    - command: 'rm -rf ~/.local/share/nvim/'
-      description: Removing local/share/nvim
       stdout: true
