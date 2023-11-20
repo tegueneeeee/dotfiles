@@ -18,4 +18,3 @@ alias copypath='pwd | pbcopy' # copy current patht to clipboard
 alias o='open .'
 alias c='clear'
 alias cat='bat'
-

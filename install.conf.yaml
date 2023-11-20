@@ -7,9 +7,6 @@
     - command: 'zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1'
       description: Installing zap
       stdout: true
-    - command: "LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh"
-      description: Install LunarVim
-      stdout: true
 
 - defaults:
     link:
@@ -28,6 +25,12 @@
       force: true
     ~/.config/zsh:
       path: zsh
+      force: true
+    ~/.config/yabai:
+      path: yabai
+      force: true
+    ~/.config/skhd:
+      path: skhd
       force: true
     ~/.p10k.zsh:
       path: p10k.zsh

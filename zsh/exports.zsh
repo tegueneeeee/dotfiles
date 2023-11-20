@@ -23,6 +23,5 @@ export FZF_DEFAULT_OPTS=" \
 
 
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
