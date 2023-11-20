@@ -18,6 +18,3 @@ alias copypaht='pwd | pbcopy' # copy current patht to clipboard
 alias o='open .'
 alias c='clear'
 alias cat='bat'
-
-alias flutter='fvm flutter'
-alias dart='fvm dart'

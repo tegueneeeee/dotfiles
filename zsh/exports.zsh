@@ -17,6 +17,5 @@ export PATH="$PATH":"$HOME/fvm/default/bin"
 export PATH="$PATH":"$HOME/.local/bin"
 
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
