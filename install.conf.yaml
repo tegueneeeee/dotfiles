@@ -8,15 +8,6 @@
     - command: 'zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1'
       description: Installing zap
       stdout: true
-    - command: 'dart pub global activate fvm'
-      description: Installing fvm
-      stdout: true
-    - command: 'yes | fvm global stable'
-      description: Install flutter stable
-      stdout: true
-    - command: 'dart pub global activate flutter_gen'
-      description: Installing flutter_gen
-      stdout: true
 
 - defaults:
     link:
@@ -36,6 +27,12 @@
     ~/.config/zsh:
       path: zsh
       force: true
+    ~/.config/yabai:
+      path: yabai
+      force: true
+    ~/.config/skhd:
+      path: skhd
+      force: true
     ~/.p10k.zsh:
       path: p10k.zsh
       force: true
@@ -50,7 +47,4 @@
 - shell:
     - command: 'git submodule update --init --recursive'
       description: Installing submodules
-      stdout: true
-    - command: 'rm -rf ~/.local/share/nvim/'
-      description: Removing local/share/nvim
       stdout: true
