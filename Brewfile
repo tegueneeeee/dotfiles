@@ -33,3 +33,5 @@ cask "android-platform-tools"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "slack"
+
+mas "Xcode", id: 497799835
