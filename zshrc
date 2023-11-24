@@ -33,4 +33,3 @@ plug "zsh-users/zsh-syntax-highlighting"
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/kimtaekwon/.dart-cli-completion/zsh-config.zsh ]] && . /Users/kimtaekwon/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
-

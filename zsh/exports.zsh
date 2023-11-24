@@ -12,10 +12,13 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
     export EDITOR='nvim'
 fi
+
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH":"$HOME/fvm/default/bin"
 export PATH="$PATH":"$HOME/.local/bin"
+export PATH="$PATH":"$HOME/.maestro/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(rbenv init - zsh)"

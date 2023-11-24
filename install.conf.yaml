@@ -39,12 +39,11 @@
     ~/.config/nvim:
       glob: true
       path: nvim
-    ~/.tmux.conf:
-      path: tmux.conf
-      force: true
 
 
 - shell:
     - command: 'git submodule update --init --recursive'
       description: Installing submodules
       stdout: true
+
+    
