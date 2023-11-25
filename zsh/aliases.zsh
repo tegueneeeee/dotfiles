@@ -11,7 +11,7 @@ alias rm='rm -i'
 alias m="git checkout master"
 alias s="git checkout stable"
 
-alias vi='nvim'
+alias vim='nvim'
 alias ls='exa'
 alias ll='ls -l'
 alias copypath='pwd | pbcopy' # copy current patht to clipboard

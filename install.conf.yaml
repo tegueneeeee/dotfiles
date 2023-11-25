@@ -16,8 +16,6 @@
 
 - create:
     - ~/.config
-    - ~/.zshconfig
-    - ~/.n
 
 - link:
     ~/.zshrc:
@@ -36,8 +34,8 @@
       path: p10k.zsh
       force: true
     ~/.config/nvim:
-      glob: true
       path: nvim
+      force: true
 
 
 - shell:

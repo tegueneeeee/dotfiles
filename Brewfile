@@ -22,6 +22,8 @@ brew "vim"
 brew "zlib"
 brew "cocoapods"
 brew "fastlane"
+brew "fd"
+brew "ripgrep"
 
 cask "postman"
 cask "iterm2"
@@ -33,5 +35,3 @@ cask "android-platform-tools"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "slack"
-
-mas "Xcode", id: 497799835

@@ -27,4 +27,3 @@ export FZF_DEFAULT_OPTS=" \
 eval "$(zoxide init zsh)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(rbenv init - zsh)"
