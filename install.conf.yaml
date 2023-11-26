@@ -1,11 +1,7 @@
----
-
 - shell:
-    - command: 'brew bundle'
-      description: Homebrew bundle
+    - command: './scripts/os-check.sh'
       stdout: true
-    - command: 'zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1'
-      description: Installing zap
+    - command: './scripts/git-setup.sh'
       stdout: true
 
 - defaults:
@@ -35,6 +31,9 @@
       force: true
     ~/.config/nvim:
       path: nvim
+      force: true
+    ~/.gitconfig:
+      path: gitconfig
       force: true
 
 

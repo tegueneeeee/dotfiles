@@ -13,9 +13,12 @@ else
     export EDITOR='nvim'
 fi
 
+## Flutter
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH":"$HOME/fvm/default/bin"
-export PATH="$PATH":"$HOME/.local/bin"
+## Fastlane
+export PATH="$PATH":"$HOME/.fastlane/bin"
+## Maestroi
 export PATH="$PATH":"$HOME/.maestro/bin"
 
 export FZF_DEFAULT_OPTS=" \
