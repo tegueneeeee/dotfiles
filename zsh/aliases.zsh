@@ -18,3 +18,6 @@ alias copypath='pwd | pbcopy' # copy current patht to clipboard
 alias o='open .'
 alias c='clear'
 alias cat='bat'
+
+alias java8='export PATH="$PATH":"/usr/libexec/java_home -v 1.8/bin"'
+alias java11='export PATH="$PATH":"/usr/libexec/java_home -v 11/bin"'
