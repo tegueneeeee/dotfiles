@@ -36,3 +36,5 @@
   pr = "!pr() { \
           git fetch origin pull/$1/head:$2; \
         }; pr"
+[init]
+	defaultBranch = main

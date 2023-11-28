@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "koekeishiya/formulae"
 
 brew "yabai"
@@ -24,6 +25,7 @@ brew "ruby-build"
 brew "libyaml"
 brew "peco"
 
+cask "font-meslolgs-nf"
 cask "iterm2"
 cask "raycast"
 cask "figma"
