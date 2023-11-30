@@ -10,37 +10,17 @@ function generate_key() {
 	local EMAIL=$3
 	local AUTHOR="$USER_NAME <$EMAIL>"
 
-	if gpg --list-secret-keys | grep -q "$AUTHOR" &>/dev/null; then
-		echo "Key already exists ✅ : $AUTHOR"
-		return
-	fi
-
-	if [[ "$GITHUB_ACTIONS" == 'true' ]]; then
-		gpg --no-tty --pinentry-mode loopback --passphrase passwd --quick-gen-key "$AUTHOR" default default 0
-	else
-		gpg --quick-gen-key "$AUTHOR" default default 0
-	fi
-
 	GPG_KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" {print $5}' | tail -n 1)
 	GPG_PUBLIC_KEY=$(gpg --armor --export "$GPG_KEY_ID")
+	git config --global user.signingkey "$GPG_KEY_ID"
 
-	if [[ "$GITHUB_ACTIONS" != 'true' ]]; then
-		yes | gh auth login -h github.com -s admin:gpg_key -p https -w
-		gh api \
-			--method POST \
-			-H "Accept: application/vnd.github+json" \
-			/user/gpg_keys \
-			-f name="$AUTHOR's GPG Key" \
-			-f armored_public_key="$GPG_PUBLIC_KEY"
-	fi
-
-	cat <<EOT >>.gitconfig-"$CONFIG_NAME"
-[user]
-    name = "$USER_NAME"
-    EMAIL = "$EMAIL"
-    signingkey = "$GPG_KEY_ID"
-
-EOT
+	echo "Github POST GPG KEY"
+	gh api \
+		--method POST \
+		-H "Accept: application/vnd.github+json" \
+		/user/gpg_keys \
+		-f name="$AUTHOR's GPG Key" \
+		-f armored_public_key="$GPG_PUBLIC_KEY"
 }
 CONFIG_NAME_PRIVATE="private"
 
