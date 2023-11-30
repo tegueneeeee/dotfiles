@@ -25,7 +25,7 @@ brew "ruby-build"
 brew "libyaml"
 brew "peco"
 
-cask "font-meslolgs-nf"
+cask "font-meslo-lg-nerd-font"
 cask "iterm2"
 cask "raycast"
 cask "figma"
