@@ -2,9 +2,9 @@
 
 ## Requirement
 
-### HomeBrew
+### Githib auth
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+gh auth login -h github.com -s admin:gpg_key -p https -w
 ```
 
 ```sh
