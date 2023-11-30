@@ -10,6 +10,15 @@ function generate_key() {
 	local EMAIL=$3
 	local AUTHOR="$USER_NAME <$EMAIL>"
 
+	if gpg --list-secret-keys | grep -q "$AUTHOR" &>/dev/null; then
+		echo "Key already exists ✅ : $AUTHOR"
+	else
+		echo "Key is not exist ⛔️ : $AUTHOR"
+		echo "Try this command and restart ./install"
+		echo "gpg --quick-gen-key '$(git config user.name) <$(git config user.email)>' default default 0"
+		return
+	fi
+
 	GPG_KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '$1 == "sec" {print $5}' | tail -n 1)
 	GPG_PUBLIC_KEY=$(gpg --armor --export "$GPG_KEY_ID")
 	git config --global user.signingkey "$GPG_KEY_ID"
