@@ -8,14 +8,15 @@ function generate_key() {
 	local CONFIG_NAME=$1
 	local USER_NAME=$2
 	local EMAIL=$3
-	local AUTHOR="$USER_NAME <$EMAIL>"
+	local HOST_NAME=$4
+	local AUTHOR="$USER_NAME <$EMAIL> $HOST_NAME"
 
 	if gpg --list-secret-keys | grep -q "$AUTHOR" &>/dev/null; then
 		echo "Key already exists ✅ : $AUTHOR"
 	else
 		echo "Key is not exist ⛔️ : $AUTHOR"
 		echo "Try this command and restart ./install"
-		echo "gpg --quick-gen-key '$(git config user.name) <$(git config user.email)>' default default 0"
+		echo "gpg --quick-gen-key '$(git config user.name) <$(git config user.email)> $(hostname)' default default 0"
 		return
 	fi
 
@@ -35,8 +36,9 @@ CONFIG_NAME_PRIVATE="private"
 
 USER_NAME="Taekwon Kim (tegueneeeee)"
 EMAIL_PRIVATE="kimxordnjs@naver.com"
+HOST_NAME="$(hostname)"
 
-generate_key "$CONFIG_NAME_PRIVATE" "$USER_NAME" "$EMAIL_PRIVATE"
+generate_key "$CONFIG_NAME_PRIVATE" "$USER_NAME" "$EMAIL_PRIVATE" "$HOST_NAME"
 
 git config --global init.defaultBranch main
 git config --global user.name "$USER_NAME"
