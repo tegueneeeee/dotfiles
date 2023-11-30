@@ -1,6 +1,11 @@
 [user]
 	name = Taekwon Kim (tegueneeeee)
 	email = kimxordnjs@naver.com
+	signingkey = 163254F7F9595B21
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
 [core]
   editor = nvim
   attributefile = ~./gitattributes
@@ -38,3 +43,5 @@
         }; pr"
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/Repos/private/"]
+	path = .gitconfig-private

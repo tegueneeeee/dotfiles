@@ -1,6 +1,9 @@
 - shell:
     - command: './scripts/os-check.sh'
       stdout: true
+    - command: 'gh auth login -h github.com -s admin:gpg_key -p https -w'
+      stdin: true
+      stdout: true
     - command: './scripts/git-setup.sh'
       stdout: true
 
