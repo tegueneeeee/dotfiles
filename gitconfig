@@ -1,9 +1,9 @@
 [user]
 	name = Taekwon Kim (tegueneeeee)
-  email = kimxordnjs@naver.com
+	email = kimxordnjs@naver.com
   signingkey = 77D1E4FCC50F5FB2 
 [commit]
-  gpgsign = true
+	gpgsign = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [core]
@@ -43,3 +43,5 @@
         }; pr"
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/Repos/private/"]
+	path = .gitconfig-private
