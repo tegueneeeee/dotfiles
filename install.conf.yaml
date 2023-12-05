@@ -3,6 +3,8 @@
       stdout: true
     - command: './scripts/git-setup.sh'
       stdout: true
+    - command: './scripts/flutter-setup.sh'
+      stdout: true
 
 - defaults:
     link:
