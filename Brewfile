@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "koekeishiya/formulae"
+
 
 brew "yabai"
 brew "skhd"
@@ -27,6 +29,8 @@ brew "ruby-build"
 brew "libyaml"
 brew "peco"
 
+cask "temurin8"
+cask "temurin11"
 cask "font-meslo-lg-nerd-font"
 cask "iterm2"
 cask "raycast"
