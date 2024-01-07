@@ -1,7 +1,7 @@
 [user]
 	name = Taekwon Kim (tegueneeeee)
 	email = kimxordnjs@naver.com
-	signingkey = DF847F758D42649A
+	signingkey = 16C0B00F3BF8DA68
 [commit]
 	gpgsign = true
 [gpg]

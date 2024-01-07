@@ -2,7 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "koekeishiya/formulae"
-
+tap "leoafarias/fvm"
 
 brew "yabai"
 brew "skhd"
