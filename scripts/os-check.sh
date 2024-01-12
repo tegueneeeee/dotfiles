@@ -8,7 +8,11 @@ mac_requirement() {
 		xcode-select --install
 		echo "Completed installing CommandLineTools ✅ "
 	fi
-
+	if [[ $(uname -m) == "arm64" ]]; then
+		echo "Softwareupdate rosetta, licence..."
+		sudo softwareupdate --install-rosetta --agree-to-license
+		echo "Completed Softwareupdate ✅"
+	fi
 	if type brew >/dev/null; then
 		echo "Brew already installed"
 	else
@@ -19,11 +23,7 @@ mac_requirement() {
 	brew update
 	brew upgrade --cask --greedy
 	brew bundle
-	if [[ $(uname -m) == "arm64" ]]; then
-		echo "Softwareupdate rosetta, licence..."
-		sudo softwareupdate --install-rosetta --agree-to-license
-		echo "Completed Softwareupdate ✅"
-	fi
+	
 	echo "Installing zap"
 	zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 	echo "Completed installing zap"
