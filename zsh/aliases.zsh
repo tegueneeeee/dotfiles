@@ -18,8 +18,6 @@ alias ll='ls -l'
 alias copypath='pwd | pbcopy' # copy current patht to clipboard
 alias o='open .'
 alias cat='bat'
-alias flutter='fvm flutter'
-alias dart='fvm dart'
 alias java8='export JAVA_HOME=$JAVA_8_HOME ; PATH="${JAVA_HOME}/bin:${PATH}"'
 alias java11='export JAVA_HOME=$JAVA_11_HOME ; PATH="${JAVA_HOME}/bin:${PATH}"'
 alias .='cd ..'
