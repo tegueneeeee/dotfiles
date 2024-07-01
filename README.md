@@ -11,6 +11,7 @@
 ```sh
 brew install git
 brew install gh
+brew install gpg
 ```
 
 ### Github auth
