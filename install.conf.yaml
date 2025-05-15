@@ -1,0 +1,47 @@
+- shell:
+    - command: './scripts/os-check.sh'
+      stdout: true
+    - command: './scripts/git-setup.sh'
+      stdout: true
+    - command: './scripts/flutter-setup.sh'
+      stdout: true
+
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.config
+
+- link:
+    ~/.zshrc:
+      path: zshrc
+      force: true
+    ~/.config/zsh:
+      path: zsh
+      force: true
+    ~/.config/yabai:
+      path: yabai
+      force: true
+    ~/.config/skhd:
+      path: skhd
+      force: true
+    ~/.p10k.zsh:
+      path: p10k.zsh
+      force: true
+    ~/.config/nvim:
+      path: nvim
+      force: true
+    ~/.gitconfig:
+      path: gitconfig
+      force: true
+
+
+- shell:
+    - command: 'git submodule update --init --recursive'
+      description: Installing submodules
+      stdout: true
+
+    
