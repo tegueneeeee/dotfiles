@@ -5,6 +5,7 @@ tap "koekeishiya/formulae"
 tap "pulumi/tap"
 
 brew "bat"
+brwe "cocoapods"
 brew "colima"
 brew "docker"
 brew "eza"
