@@ -335,6 +335,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>16554AE0-CFEB-4704-8472-B05BD6ABABB1</string>
+	<key>EnableProxyIcon</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -1095,6 +1097,8 @@
 				<key>Red Component</key>
 				<real>0.77647058823529413</real>
 			</dict>
+			<key>Bound Hosts</key>
+			<array/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -1275,6 +1279,8 @@
 			<string>16554AE0-CFEB-4704-8472-B05BD6ABABB1</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -1525,6 +1531,8 @@
 		</dict>
 	</dict>
 	<key>SoundForEsc</key>
+	<false/>
+	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>

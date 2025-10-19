@@ -24,3 +24,6 @@ plug "zap-zsh/exa"
 plug "romkatv/powerlevel10k"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Added by Windsurf
+export PATH="/Users/kimtaekwon/.codeium/windsurf/bin:$PATH"
