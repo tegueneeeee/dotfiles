@@ -14,6 +14,15 @@ brew install gh
 brew install gpg
 ```
 
+
+- chsh
+```sh
+echo (which fish) | sudo tee -a /etc/shells
+```
+```sh
+chsh -s (which fish)
+```
+
 ### Github auth
 ```sh
 gh auth login -h github.com -s admin:gpg_key -p https -w
