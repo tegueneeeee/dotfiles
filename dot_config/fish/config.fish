@@ -12,4 +12,6 @@ if status is-interactive
     set fish_vi_force_cursor
 end
 
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+
 starship init fish | source
