@@ -24,12 +24,4 @@ gh auth login -h github.com -s admin:gpg_key -p https -w
 gpg --quick-gen-key Taekwon Kim <kimxordnjs@naver.com> $(hostname)' default default 0
 ```
 
-```sh
-./install
-```
-
-### yabai, skhd start
-```sh
-yabai --start-service
-skhd --start-service
 ```

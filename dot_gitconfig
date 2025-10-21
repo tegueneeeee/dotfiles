@@ -1,0 +1,48 @@
+[user]
+	name = Taekwon Kim (tegueneeeee)
+	email = kimxordnjs@naver.com
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[credential]
+  helper = osxkeychain
+[core]
+  editor = nvim
+  attributefile = ~./gitattributes
+[color]
+  ui = auto
+[merge]
+  conflictstyle = zdiff3
+[push]
+  default = simple
+  autoSetupRemote = true
+[pull]
+  rebase = false
+[fetch]
+  prune = true
+[github]
+  user = tegueneeeee
+[alias]
+  ba = branch -a
+  bd = "!bd() { \
+          git branch | awk '{ if ($1 != \"*\") print $1; }' | xargs git branch -D; \
+        }; bd"
+  bm = branch -m
+  ch = checkout
+  c = commit
+  ca = commit --amend
+  cl = clean
+  clf = clean -f
+  f = fetch --all
+  sw = switch
+  stu = stash -u
+  stp = stash pop
+  pu = push
+  pf = push --force
+  pl = pull
+  l = log --oneline --reverse
+  pr = "!pr() { \
+          git fetch origin pull/$1/head:$2; \
+      }; pr"
+  undo = reset --soft HEAD^
+[init]
+	defaultBranch = main
