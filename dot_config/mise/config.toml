@@ -1,3 +1,9 @@
 [tools]
-bun = "1.2.10"
-flutter = "latest"
+bun = "1.2.15"
+flutter = "3.35.4"
+java = "temurin-21.0.8+9"
+gradle = "8.9"
+nodejs = "22.21.0"
+python = "3.12.12"
+ruby = "3.3.5"
+cocoapods = "1.16.2"
