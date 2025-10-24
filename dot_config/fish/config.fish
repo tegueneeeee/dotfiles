@@ -13,5 +13,3 @@ if status is-interactive
 end
 
 set -x ANDROID_HOME $HOME/Library/Android/sdk
-
-starship init fish | source

@@ -10,6 +10,7 @@ abbr -a la eza --icons --git --group-directories-first --long -all
 abbr -a rm rm -i
 abbr -a mv mv -i
 abbr -a cp cp -i
+abbr -a o open .
 
 abbr -a cat bat
 abbr -a weather curl 'https://wttr.in'
