@@ -1,5 +1,4 @@
 --- wezterm.lua
---- $ figlet -f small Wezterm
 --- __      __      _
 --- \ \    / /__ __| |_ ___ _ _ _ __
 ---  \ \/\/ / -_)_ /  _/ -_) '_| '  \
@@ -21,14 +20,14 @@ end
 -- Settings
 config.default_prog = { fish_path, "-l" }
 
---config.color_scheme = "Tokyo Night"
 config.color_scheme = "Catppuccin Frappe"
 local custom_colors = {
-	red = "#D06F79", --> Tokyonight: "#F7768e"
-	cyan = "#88C0D0", --> Tokyonight: "#7DCFFF"
-	magenta = "#B48EAD", --> Tokyonight: "#BB9AF7"
-	yellow = "#EBCB8B", --> Tokyonight: "#E0AF68"
+	red = "#E78284",
+	teal = "#81C8BE",
+	mauve = "#CA9EE6",
+	yellow = "#E5C890",
 }
+
 config.font = wezterm.font_with_fallback({
 	{ family = "MesloLGM Nerd Font", scale = 1.35 },
 })
@@ -146,11 +145,11 @@ wezterm.on("update-status", function(window, pane)
 	-- Utilize this to display LDR or current key table name
 	if window:active_key_table() then
 		stat = window:active_key_table()
-		stat_color = custom_colors.cyan
+		stat_color = custom_colors.teal
 	end
 	if window:leader_is_active() then
 		stat = "LDR"
-		stat_color = custom_colors.magenta
+		stat_color = custom_colors.mauve
 	end
 
 	local basename = function(s)
