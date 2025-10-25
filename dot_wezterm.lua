@@ -1,11 +1,3 @@
---- wezterm.lua
---- __      __      _
---- \ \    / /__ __| |_ ___ _ _ _ __
----  \ \/\/ / -_)_ /  _/ -_) '_| '  \
----   \_/\_/\___/__|\__\___|_| |_|_|_|
----
---- My Wezterm config file
-
 local wezterm = require("wezterm")
 local act = wezterm.action
 
@@ -29,7 +21,7 @@ local custom_colors = {
 }
 
 config.font = wezterm.font_with_fallback({
-	{ family = "MesloLGM Nerd Font", scale = 1.35 },
+	{ family = "HackGen Console NF", scale = 1.35 },
 })
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 24
@@ -45,7 +37,7 @@ config.inactive_pane_hsb = {
 }
 
 -- Keys
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	-- Send C-a when pressing C-a twice
 	{ key = "a", mods = "LEADER|CTRL", action = act.SendKey({ key = "a", mods = "CTRL" }) },
