@@ -13,3 +13,7 @@ if status is-interactive
 end
 
 set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x PATH $PATH $HOME/.pub-cache/bin
+
+# Added by Antigravity
+fish_add_path /Users/kimtaekwon/.antigravity/antigravity/bin
