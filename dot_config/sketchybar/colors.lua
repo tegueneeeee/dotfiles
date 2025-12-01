@@ -57,23 +57,6 @@ local light_colors = {
 local current_theme = "dark"
 local colors = dark_colors
 
-local function detect_theme()
-	sbar.exec("defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark || echo light", function(mode)
-		local new_theme = mode:gsub("%s+", "")
-		if new_theme ~= current_theme then
-			current_theme = new_theme
-			if current_theme == "dark" then
-				colors = dark_colors
-			else
-				colors = light_colors
-			end
-			sbar.trigger("theme_changed")
-		end
-	end)
-end
-
-detect_theme()
-
 local function with_alpha(color, alpha)
 	if alpha > 1.0 or alpha < 0.0 then
 		return color
@@ -88,7 +71,6 @@ return setmetatable({
 	get_current_theme = function()
 		return current_theme
 	end,
-	detect_theme = detect_theme,
 }, {
 	__index = function(_, key)
 		return colors[key]
