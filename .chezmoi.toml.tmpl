@@ -1,0 +1,7 @@
+# .chezmoi.toml.tmpl
+
+{{/* chezmoi apply 실행 시 --data '{"profile":"work"}' 와 같이 외부에서 profile 값을 주입받습니다. */}}
+{{/* 만약 주입받지 못하면 기본값으로 "personal"을 사용합니다. */}}
+{{- $profile := .profile | default "personal" -}}
+
+{{- $_ := set . "profile" $profile -}}
