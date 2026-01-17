@@ -13,7 +13,7 @@ These steps will set up your machine from a clean state.
     ```
 
 2.  **Install and Initialize `chezmoi`:**
-    This command installs `chezmoi`, clones this dotfiles repository, and applies the configurations. This will automatically install all other tools listed in the `Brewfile`.
+    This command installs `chezmoi`, clones this dotfiles repository, and applies the configurations. This includes installing all other tools listed in the `Brewfile`, **and automatically applying essential macOS developer settings and your wallpaper.**
 
     *Replace `YOUR_GITHUB_USERNAME` with your actual username.*
     ```sh

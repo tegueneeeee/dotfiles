@@ -44,7 +44,11 @@ cask "visual-studio-code"
 cask "wezterm"
 cask "slack"
 
-{{- if eq .profile "work" }}
+{{- $profile := "personal" -}}
+{{- if (hasKey . "profile") -}}
+    {{- $profile = .profile -}}
+{{- end -}}
+{{- if eq $profile "work" }}
 # --- Work-specific Packages ---
 
 {{- else }}

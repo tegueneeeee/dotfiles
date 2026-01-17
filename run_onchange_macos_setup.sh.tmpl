@@ -1,0 +1,41 @@
+#!/bin/bash
+# Script to apply macOS developer settings
+
+echo "Starting macOS developer settings..."
+
+# Check and prompt for Xcode Command Line Tools installation
+if ! xcode-select -p &>/dev/null; then
+  echo "Xcode Command Line Tools need to be installed. Please follow the instructions in the pop-up window."
+  xcode-select --install
+fi
+
+# Set keyboard repeat rate
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 15
+
+# Finder settings: show hidden files, all extensions, and path bar
+defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Dock settings: disable showing recent applications
+defaults write com.apple.dock "show-recents" -bool "false"
+
+# Restart affected processes to apply changes
+killall Finder
+killall Dock
+
+echo "macOS settings applied."
+
+# Set wallpaper
+# Use the wallpaper.png path within the chezmoi source directory
+WALLPAPER_PATH="{{ .chezmoi.sourceDir }}/wallpaper/wallpaper.png"
+if [ -f "$WALLPAPER_PATH" ]; then
+  echo "Setting wallpaper..."
+  osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$WALLPAPER_PATH\""
+  echo "Wallpaper set."
+else
+  echo "Warning: Wallpaper file not found: $WALLPAPER_PATH"
+fi
+
+# test
