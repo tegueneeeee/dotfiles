@@ -1,0 +1,58 @@
+# --- Common Packages ---
+# Taps
+tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "nikitabobko/tap"
+
+# Brews
+brew "bat"
+brew "cairo"
+brew "chezmoi"
+brew "eza"
+brew "fd"
+brew "fish"
+brew "fzf"
+brew "gemini-cli"
+brew "gh"
+brew "git"
+brew "gnupg"
+brew "libtiff"
+brew "libyaml"
+brew "lua"
+brew "mise"
+brew "neovim"
+brew "pinentry-mac"
+brew "qemu"
+brew "ripgrep"
+brew "yq"
+brew "zlib"
+brew "zoxide"
+brew "felixkratz/formulae/borders"
+brew "felixkratz/formulae/sketchybar"
+brew "nowplaying-cli"
+brew "switchaudio-osx"
+
+# Casks
+cask "aerospace"
+cask "font-meslo-lg-nerd-font"
+cask "font-sf-mono"
+cask "font-sf-pro"
+cask "sf-symbols"
+cask "google-chrome"
+cask "jetbrains-toolbox"
+cask "visual-studio-code"
+cask "wezterm"
+cask "slack"
+
+{{- $profile := "personal" -}}
+{{- if (hasKey . "profile") -}}
+    {{- $profile = .profile -}}
+{{- end -}}
+{{- if eq $profile "work" }}
+# --- Work-specific Packages ---
+
+{{- else }}
+# --- Personal-specific Packages ---
+cask "docker"
+
+{{- end }}

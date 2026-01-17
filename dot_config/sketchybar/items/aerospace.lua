@@ -163,10 +163,10 @@ local function onWorkspaceChanged(workspace, selected)
 	workspace:set({
 		icon = { highlight = selected },
 		label = { highlight = selected },
-		background = { border_color = selected and colors.black or colors.bg1 },
+		background = { border_color = selected and colors.green or colors.lavender },
 	})
 	workspace.space_bracket:set({
-		background = { border_color = selected and colors.lavender or colors.bg2 },
+		background = { border_color = selected and colors.green or colors.lavender },
 	})
 end
 
