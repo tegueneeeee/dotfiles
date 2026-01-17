@@ -15,4 +15,5 @@ end
 set -x ANDROID_HOME $HOME/Library/Android/sdk
 set -x PATH $PATH $HOME/.pub-cache/bin
 
-fish_config theme choose "Catppuccin Frappe"
+# Added by Antigravity
+fish_add_path /Users/kimtaekwon/.antigravity/antigravity/bin
