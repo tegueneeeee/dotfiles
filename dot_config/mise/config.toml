@@ -1,6 +1,6 @@
 [tools]
 bun = "1.2.15"
-flutter = "3.35.4"
+flutter = "3.41.0-stable"
 java = "temurin-21.0.8+9"
 gradle = "8.9"
 nodejs = "22.21.0"
